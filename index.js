@@ -15,7 +15,7 @@ function myFunction() {
 }
 myFunction();
 
-//🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: The variable 'internal' is scoped within nestedFunction.
+//🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: nestedFunction and internal are both scoped within myFunction
 
 
 
@@ -31,8 +31,10 @@ For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you ma
 
 function summation(number) {
   let sum = 0;
-  for(let i = 0; i <= number; i++){
+  //dont need to start for loop at 0 since 0+0 is irrelevant
+  for(let i = 1; i <= number; i++){
     sum += i;
+    //sum = sum + i
   }
   return sum
 }  
@@ -67,16 +69,14 @@ const zooAnimals = [
 
 function animalNames(data){
  // const newData = zooAnimals;
-     let displayNames = {};
-     newData.forEach(animal => {
-//        let name = animal[animal_name];
-//        let scientific = animal[scientific_name];
-        displayNames[animal] = {
-          name: animal['animal_name'],
-          scientific: animal['scientific_name']         
-        }
+     let displayNames = [];
+     data.forEach(animal => {
+       let n = `name: ${animal.animal_name}, scientific: ${animal.scientific_name}`
+       displayNames.push(n);      
+        
       });
-      console.log(displayNames);
+      return displayNames
+      //console.log('animal names: displayNames);
     }
 
     //console.log(animalNames(zooAnimals))
@@ -91,9 +91,19 @@ function animalNames(data){
   */
 
   function lowerCaseNames(data){
-  //  const lc =  data.map((animal) => {zooAnimals.animal_name.toLowerCase());
-      
-  }
+    const lc =  data.map((animal) => {
+      return animal.animal_name.toLowerCase();    
+  });
+  return lc;
+}
+
+//ES6 method:
+// function lowerCaseNames(data){
+//   return data.map((animal) => animal.animal_name.toLowerCase());
+// }
+
+
+
   console.log('low case:', lowerCaseNames(zooAnimals));
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -105,6 +115,7 @@ function animalNames(data){
      const lowPop = data.filter((animal) => {
        return animal.population <= 5;
      });
+     return lowPop;
   }
 
     console.log('low pop', lowPopulationAnimals(zooAnimals));
@@ -120,6 +131,7 @@ function animalNames(data){
     const totalPop = data.reduce((total, animal) => {
       return total += animal.population;
     }, 0);
+    return totalPop;
   }
   
   console.log(USApop(zooAnimals));
@@ -216,23 +228,25 @@ function CuboidMaker(length, width, height) {
 // 🦄🦄🦄 Topic 4: Classes 🦄🦄🦄 //
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
-  constructor(length, width, height){
-    this.length = 4;
-    this.width = 5;
-    this.height = 5;
+  constructor(dimensions){
+    this.length = dimensions.length;
+    this.width = dimensions.width;
+    this.height = dimensions.height;
   }
   volume(){
-  this.length * this.width * this.height
+  return this.length * this.width * this.height
    
   }
   surfaceArea(length, width, height){
-    2 * (this.length * this.width + this.length * this.height + this.width * this.height)
+   return 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
   }
 }
 
-const cuboidTwo = new CuboidMaker(4,5,5);
+const cuboidTwo = new CuboidMaker({length: 4, width: 5, height: 5});
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
+console.log('cub2 len', cuboidTwo.length)
+
 console.log('c2 vol:', cuboidTwo.volume()); // 100
 console.log('c2 sa:', cuboidTwo.surfaceArea()); // 130
 
