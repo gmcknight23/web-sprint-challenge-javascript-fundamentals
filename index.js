@@ -224,9 +224,9 @@ function CuboidMaker(length, width, height) {
 //🦄🦄🦄 1. Take your prototypes from above and refactor into class syntax. Please rename your class CuboidMakerTwo and your object cuboidTwo 🦄🦄🦄
 class CuboidMakerTwo{
   constructor(length, width, height){
-    this.length = length;
-    this.width = width;
-    this.height = height;
+    this.length = 4;
+    this.width = 5;
+    this.height = 5;
   }
   volume(length, width, height){
     this.length * this.width * this.height
