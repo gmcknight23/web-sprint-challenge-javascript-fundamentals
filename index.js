@@ -39,7 +39,7 @@ function summation(number) {
 
 console.log(summation(4))
 
-//console.log(summation(11))
+console.log(summation(11))
 
 // function summation(number) {
 //   // const array = [1, 2, 3, 4];
