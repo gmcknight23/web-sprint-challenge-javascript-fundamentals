@@ -30,8 +30,8 @@ myFunction();
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(number) {
-  let sum = 4;
-  for(let i = 0; i < number; i++){
+  let sum = 0;
+  for(let i = 0; i <= number; i++){
     sum += i;
   }
   return sum
@@ -39,7 +39,7 @@ function summation(number) {
 
 console.log(summation(4))
 
-console.log(summation(11))
+console.log(summation(10))
 
 // function summation(number) {
 //   // const array = [1, 2, 3, 4];
