@@ -233,8 +233,8 @@ class CuboidMakerTwo{
 const cuboidTwo = new CuboidMaker(4,5,5);
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-console.log(cuboidTwo.volume()); // 100
-console.log(cuboidTwo.surfaceArea()); // 130
+console.log('c2 vol:', cuboidTwo.volume()); // 100
+console.log('c2 sa:', cuboidTwo.surfaceArea()); // 130
 
 
 
