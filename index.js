@@ -15,7 +15,7 @@ function myFunction() {
 }
 myFunction();
 
-//🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: The variable internal is scoped within nestedFunction.
+//🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: The variable 'internal' is scoped within nestedFunction.
 
 
 
@@ -30,14 +30,36 @@ myFunction();
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
 function summation(number) {
-  // const array = [1, 2, 3, 4];
-    let sum = 0;
-     for(let i = 0; i < number; i++){
-      return sum + number[i]; 
-  }  
-}
+  let sum = 4;
+  for(let i = 0; i < number; i++){
+    sum += i;
+  }
+  return sum
+}  
+
+console.log(summation(4))
+
+//console.log(summation(11))
+
+// function summation(number) {
+//   // const array = [1, 2, 3, 4];
+//     let sum = 0;
+//      for(let i = 0; i < number; i++){
+//        if(sum === 0){
+//          sum = 1
+//        }else
+//       return sum + number[i]; 
+//   }  
+// }
  
-console.log(summation(4));
+
+// let sum = 0;
+// for(let i = 0; i < number; i++){
+//  return sum++ + number[i]; 
+// }  
+
+
+// console.log(summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -62,16 +84,23 @@ const zooAnimals = [
   */
 
   function animalNames(data){
-    zooAnimals.forEach(animal => {
-      return {
-        name: zooAnimals.animal_name,
-        scientific: zooAnimals.scientific_name,
-        habitat: zooAnimals.state
-      }
+  //   zooAnimals.forEach(animal => {
+  //     zooAnimals.animal_name,
+  //     zooAnimals.scientific_name
+  //     }
+  //   });
+  // console.log(animalNames(zooAnimals));
+
+  // function animalNames(data){
+  //   zooAnimals.forEach(animal => {
+  //     return {
+  //       name: zooAnimals.animal_name,
+  //       scientific: zooAnimals.scientific_name
+  //     }
         
-    });
+  //   });
   }
-  console.log(animalNames(zooAnimals));
+  // console.log(animalNames(zooAnimals));
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
