@@ -41,25 +41,7 @@ console.log(summation(4))
 
 console.log(summation(10))
 
-// function summation(number) {
-//   // const array = [1, 2, 3, 4];
-//     let sum = 0;
-//      for(let i = 0; i < number; i++){
-//        if(sum === 0){
-//          sum = 1
-//        }else
-//       return sum + number[i]; 
-//   }  
-// }
- 
 
-// let sum = 0;
-// for(let i = 0; i < number; i++){
-//  return sum++ + number[i]; 
-// }  
-
-
-// console.log(summation(4));
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
 // Given this zoo data from around the United States, follow the instructions below. Use the specific array methods in the requests below to solve the problems.
@@ -83,13 +65,17 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(data){
-  //   zooAnimals.forEach(animal => {
-  //     zooAnimals.animal_name,
-  //     zooAnimals.scientific_name
-  //     }
-  //   });
-  // console.log(animalNames(zooAnimals));
+function animalNames(data){
+//  //   const newData = zooAnimals;
+//      let displayNames = {};
+//      data.forEach(animal => {
+//       let name = animal[animal_name]
+//       let scientific = animal[scientific_name]
+//         });
+      }
+  
+  
+//   console.log(animalNames(zooAnimals));
 
   // function animalNames(data){
   //   zooAnimals.forEach(animal => {
@@ -99,7 +85,7 @@ const zooAnimals = [
   //     }
         
   //   });
-  }
+  //}
   // console.log(animalNames(zooAnimals));
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -198,8 +184,8 @@ function CuboidMaker(length, width, height) {
   Create a method called volume using CuboidMaker's prototype that returns the volume of a given cuboid's length, width, and height
   Formula for cuboid volume: length * width * height   */
 
-  CuboidMaker.prototype.volume = function(length, width, height){
-    this.length * this.width * this.height
+  CuboidMaker.prototype.volume = function(){
+    return this.length * this.width * this.height
   }
 
 
@@ -209,8 +195,8 @@ function CuboidMaker(length, width, height) {
   Formula for cuboid surface area of a cube: 
   2 * (length * width + length * height + width * height)  */
 
-  CuboidMaker.prototype.surfaceArea = function(length, width, height){
-    2 * (this.length * this.width + this.length * this.height + this.width * this.height)
+  CuboidMaker.prototype.surfaceArea = function(){
+    return 2 * (this.length * this.width + this.length * this.height + this.width * this.height)
   }
 
 
