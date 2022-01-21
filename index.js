@@ -66,12 +66,16 @@ const zooAnimals = [
   */
 
 function animalNames(data){
-//  //   const newData = zooAnimals;
+//   const newData = zooAnimals;
 //      let displayNames = {};
-//      data.forEach(animal => {
-//       let name = animal[animal_name]
-//       let scientific = animal[scientific_name]
-//         });
+    //  data.forEach(animal => {
+    //    let name = animal[animal_name]
+    //    let scientific = animal[scientific_name]
+    //    return {
+    //      animal.name
+    //      animal.scientific
+    //    }
+    //      });
       }
   
   
@@ -95,7 +99,7 @@ function animalNames(data){
   */
 
   function lowerCaseNames(data){
-    //zooAnimals.map(animal => zooAnimals.animal_name.toLowerCase())
+ // zooAnimals.map(animal => zooAnimals.animal_name.toLowerCase())
   }
   console.log(lowerCaseNames(zooAnimals));
   
@@ -121,7 +125,7 @@ function animalNames(data){
 
   function USApop(data){
     const totalPop = data.reduce((total, animal) => {
-      return total + animal.population;
+      return total += animal.population;
     }, 0);
   }
   
@@ -174,10 +178,11 @@ function greeting(first, last){
  Use the constructor function named CuboidMaker to accept properties for length, width, and height which can be initialized as an object
 */
 function CuboidMaker(length, width, height) {
-  this.length = length;
-  this.width = width;
-  this.height = height;
+  this.length = 4;
+  this.width = 5;
+  this.height = 5;
 }
+
 
 
 /* 🐴🐴🐴 Step 2: Volume Method 🐴🐴🐴
