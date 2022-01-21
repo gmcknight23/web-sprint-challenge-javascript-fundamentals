@@ -66,31 +66,21 @@ const zooAnimals = [
   */
 
 function animalNames(data){
-//   const newData = zooAnimals;
-//      let displayNames = {};
-    //  data.forEach(animal => {
-    //    let name = animal[animal_name]
-    //    let scientific = animal[scientific_name]
-    //    return {
-    //      animal.name
-    //      animal.scientific
-    //    }
-    //      });
-      }
+  const newData = zooAnimals;
+     let displayNames = {};
+     newData.forEach(animal => {
+//        let name = animal[animal_name];
+//        let scientific = animal[scientific_name];
+        displayNames[animal] = {
+          name: animal['animal_name'],
+          scientific: animal['scientific_name']         
+        }
+      });
+      console.log(displayNames);
+    }
   
-  
-//   console.log(animalNames(zooAnimals));
 
-  // function animalNames(data){
-  //   zooAnimals.forEach(animal => {
-  //     return {
-  //       name: zooAnimals.animal_name,
-  //       scientific: zooAnimals.scientific_name
-  //     }
-        
-  //   });
-  //}
-  // console.log(animalNames(zooAnimals));
+ 
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
@@ -228,18 +218,20 @@ class CuboidMakerTwo{
     this.width = 5;
     this.height = 5;
   }
-  volume(length, width, height){
-    this.length * this.width * this.height
+  volume(){
+  this.length * this.width * this.height
+   
   }
   surfaceArea(length, width, height){
     2 * (this.length * this.width + this.length * this.height + this.width * this.height)
   }
 }
 
+const cuboidTwo = new CuboidMaker(4,5,5);
 
 //🦄🦄🦄 Test your volume and surfaceArea methods by uncommenting the logs below: 🦄🦄🦄
-//console.log(cuboidTwo.volume()); // 100
-//console.log(cuboidTwo.surfaceArea()); // 130
+console.log(cuboidTwo.volume()); // 100
+console.log(cuboidTwo.surfaceArea()); // 130
 
 
 
